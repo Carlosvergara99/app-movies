@@ -1,0 +1,28 @@
+
+      
+  <div class="flex flex-wrap justify-content-center flex-wrap pt-4">
+     <div class="flex">
+         <div class="flex-1 md:flex-none  justify-content-center ">
+             <img [src]="movie|movieImg:300" [alt]="movie.id" class="border-round">
+         </div>
+         <div class="flex-1 md:flex-none  justify-content-center">
+             <p-card [header]="movie.original_title">
+                <span class="ml-2"></span>
+                 <div class="flex align-items-center">
+                     <p-knob [(ngModel)]="value" [readonly]="true" size="80"></p-knob>
+                     <span class="ml-2">User Score</span>
+                   </div>
+                   <span class="ml-2"></span>
+
+                   <p><span class="font-bold">Release date : </span> {{movie.release_date}}</p>    
+                   <span class="ml-2"></span>
+
+                     <p class="font-bold">Overview: </p>
+                        <ol class="pb-2"> <small>{{movie.overview}}</small></ol>
+                        
+                        <p-button label="Atras" routerLink="/"  severity="success"  icon="pi pi-arrow-circle-left " />
+
+             </p-card>
+             </div>
+       </div>
+ </div>

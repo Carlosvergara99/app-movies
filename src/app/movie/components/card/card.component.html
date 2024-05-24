@@ -1,0 +1,10 @@
+<p-card  [subheader]="movie.title" [style]="{ width: '260px' }">
+    <ng-template pTemplate="header">
+        <img alt="Card" [src]="movie|movieImg" [alt]="movie.title" width="150"/>
+    </ng-template>
+    <p>
+        {{ movie.release_date}}
+    </p>
+    <a [routerLink]=" [ 'movie/', movie.id]">Ver mas</a>
+   
+</p-card>

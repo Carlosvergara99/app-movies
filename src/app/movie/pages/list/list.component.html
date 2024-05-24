@@ -1,0 +1,18 @@
+<div class="grid pt-3" >
+
+    <p-messages class="col-12" 
+                [(value)]="messages" 
+                [enableService]="false" 
+                [closable]="false"  
+                *ngIf="movies.length==0 else tab"
+                />
+
+
+ <ng-template #tab>
+    <div *ngFor="let item of movies"
+    class="col-12 sm:col-4 md:col-3 xl:col-2">
+       <movie-card  [movie]="item" ></movie-card>
+    </div>
+ </ng-template>
+    
+</div>

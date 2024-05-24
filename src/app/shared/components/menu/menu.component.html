@@ -1,0 +1,16 @@
+<p-menubar [model]="items" >
+
+    <ng-template pTemplate="end">
+        <p-iconField iconPosition="right">
+            <p-inputIcon styleClass="pi pi-search" />
+            <input type="text" 
+            pInputText 
+            placeholder="Buscar Pelicula ..." 
+            (keydown.enter)="searchMovie(txtInput.value)"
+            #txtInput
+            > 
+        </p-iconField>
+    </ng-template>
+</p-menubar>
+
+<shared-loading *ngIf="isLoading" ></shared-loading>
